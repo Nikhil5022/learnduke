@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { FaWallet, FaEye } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
+import whatsapp from "./assets/whatsapp2.png";
 
 export default function Tutorial({
   imageLink,
@@ -59,13 +62,13 @@ export default function Tutorial({
           </span>
         </div>
         <div
-          className={` border-2 border-${borderColor} p-2 rounded-3xl flex  text-center`}
+          className={` border-2 border-${borderColor} items-center pl-1 pr-1 rounded-3xl flex  text-center`}
         >
           {locationtype}
         </div>
         {locationtype != "Remote" && (
           <div
-            className={` border-2 border-${borderColor} p-2 rounded-3xl flex  text-center`}
+            className={` border-2 border-${borderColor} p-2 rounded-3xl flex items-center  text-center`}
           >
             {location}
           </div>
@@ -73,24 +76,34 @@ export default function Tutorial({
       </div>
       <div className="flex mt-4 space-x-3 md:space-x-8">
         <a
-          href={applyLink}
-          className="w-1/3 bg-orange-400 text-white px-4 py-2 rounded-3xl   text-center"
-          target="_blank"
-          rel="noopener noreferrer"
+          href={`tel:${phoneNumber}`}
+          className="bg-orange-400 text-white px-4 py-3 rounded-3xl text-center"
           style={{ textDecoration: "none" }}
         >
-          Apply
+          <div className="flex justify-center items-center">
+            <FaPhone style={{ transform: "rotateY(180deg)" }} />
+            <div className="ml-2">Call Now</div>
+          </div>
         </a>
+
         <div
           className={` border-2 border-${borderColor} p-2 rounded-3xl flex items-center`}
         >
-          <button
-            className="focus:outline-none"
-            onClick={togglePhoneNumberVisibility}
-          >
-            <FaEye className="text-gray-700" />
-          </button>
-          <div className="text-gray-700">{renderPhoneNumber()}</div>
+          <div className="text-gray-700">
+            {/* button for whatsapp */}
+            <a
+              href={`https://wa.me/${phoneNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+              className="flex items-center"
+            >
+              {/* whatsapp icon */}
+              {/* <FaWhatsapp className="m-1 text-green-600" /> */}
+              <img src={whatsapp} alt="whatsapp" className="w-6 m-1" />
+              <div>Whatsapp</div>
+            </a>
+          </div>
         </div>
       </div>
     </div>

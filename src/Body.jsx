@@ -3,7 +3,7 @@ import Tutorial from "./Tutorial";
 import { FaAngleDown } from "react-icons/fa";
 
 // Define the filter options
-const filterOptions = ["All", "School", "College", "Home Tuition", "Remote"];
+const filterOptions = ["All", "School", "College", "HomeTuition", "Remote"];
 
 // Define the tutorial jobs data
 const tutorialJobs = [
@@ -114,13 +114,14 @@ function FilterOptions({ selectedFilter, onFilterChange }) {
   const [visibleOptions, setVisibleOptions] = useState(filterOptions.slice(0, 3));
   const [dropdownOptions, setDropdownOptions] = useState(filterOptions.slice(3));
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
-      const availableWidth = window.innerWidth-30;
+      const availableWidth = window.innerWidth - 30;
       const optionWidth = 90;
       const maxVisibleOptions = Math.floor((availableWidth - 50) / optionWidth);
-      
+
       setVisibleOptions(filterOptions.slice(0, maxVisibleOptions));
       setDropdownOptions(filterOptions.slice(maxVisibleOptions));
     };
@@ -138,52 +139,47 @@ function FilterOptions({ selectedFilter, onFilterChange }) {
   };
 
   return (
-    <div className="flex">
-      <div className="flex overflow-hidden mt-4">
-        {visibleOptions.map((option, index) => (
-          <button
-            key={index}
-            className={`px-4 py-2 bg-gray-200 rounded-lg mb-2 mr-2 md:ml-2 ${
-              selectedFilter === option ? "bg-blue-500 text-orange-600" : ""
-            }`}
-            onClick={() => onFilterChange(option)}
-          >
-            {option}
-          </button>
-        ))}
-      </div>
-      <div className="flex justify-end right-0 overflow-hidden mt-4">
-        {dropdownOptions.length > 0 && (
-          <button
-            onClick={toggleDropdown}
-            className={`px-4 py-2 bg-gray-200 rounded-lg mb-2 ml-2 mr-2 md:ml-2`}
-          >
-            <FaAngleDown className="inline-block text-xl" />
-          </button>
-        )}
-      </div>
-      {dropdownVisible && (
-        <div className={`absolute mt-20 bg-gray-200 rounded-lg shadow-2xl right-5 ${dropdownOptions.length > 0 ? 'p-5' : 'p-0'}`}>
-
-          {dropdownOptions.map((option, index) => (
-            <>
+    <div className="relative">
+      <div className="flex">
+        <div className="flex overflow-hidden mt-4" ref={dropdownRef}>
+          {visibleOptions.map((option, index) => (
             <button
               key={index}
-              className={`block w-full px-4 py-2 text-left ${
+              className={`px-4 py-2 bg-gray-200 rounded-lg mb-2 mr-2 md:ml-2 ${
+                selectedFilter === option ? "bg-blue-500 text-orange-600" : ""
+              }`}
+              onClick={() => onFilterChange(option)}
+            >
+              {option}
+            </button>
+          ))}
+        </div>
+        <div className="flex justify-end right-0 overflow-hidden mt-4">
+          {dropdownOptions.length > 0 && (
+            <button
+              onClick={toggleDropdown}
+              className={`px-4 py-2 bg-gray-200 rounded-lg mb-2 ml-2 mr-2 md:ml-2`}
+            >
+              <FaAngleDown className="inline-block text-xl" />
+            </button>
+          )}
+        </div>
+      </div>
+      {dropdownVisible && (
+        <div className="flex left-0" ref={dropdownRef}>
+          {dropdownOptions.map((option, index) => (
+            <button
+              key={index}
+              className={`px-4 py-2 text-left bg-gray-200 rounded-lg m-2 ${
                 selectedFilter === option ? " text-orange-600" : ""
               }`}
               onClick={() => {
                 onFilterChange(option);
-                toggleDropdown();
+                setDropdownVisible(false); // Close dropdown after selecting an option
               }}
             >
               {option}
             </button>
-            {index!==dropdownOptions.length &&(
-              <hr />
-            )}
-            </>
-            
           ))}
         </div>
       )}
