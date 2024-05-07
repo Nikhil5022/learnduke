@@ -52,9 +52,9 @@ export default function Tutorial({
       <div style={{ color: borderColor }} className="mt-3">
         {jobDescription}
       </div>
-      <div className="flex  mt-4 space-x-3 md:space-x-8">
+      <div className="flex flex-wrap mt-4 space-x-3 md:space-x-8">
         <div
-          className={` border-2 border-${borderColor} p-2 rounded-3xl flex items-center`}
+          className={` border-2 border-${borderColor} p-2 rounded-3xl mt-3 flex items-center`}
         >
           <FaWallet className="w-6 h-6 mr-2 text-orange-400" />
           <span>
@@ -62,17 +62,19 @@ export default function Tutorial({
           </span>
         </div>
         <div
-          className={` border-2 border-${borderColor} items-center pl-1 pr-1 rounded-3xl flex  text-center`}
+          className={` border-2 border-${borderColor} items-center mt-3 pl-1 pr-1 rounded-3xl flex  text-center`}
         >
           {locationtype}
         </div>
-        {locationtype != "Remote" && (
+        <div className="">
+        {locationtype !== "Remote" && (
           <div
-            className={` border-2 border-${borderColor} p-2 rounded-3xl flex items-center  text-center`}
+            className={` border-2 border-${borderColor} mt-3 p-2 rounded-3xl flex items-center flex-wrap`}
           >
             {location}
           </div>
         )}
+      </div>
       </div>
       <div className="flex mt-4 space-x-3 md:space-x-8">
         <a
@@ -85,9 +87,8 @@ export default function Tutorial({
             <div className="ml-2">Call Now</div>
           </div>
         </a>
-
         <div
-          className={` border-2 border-${borderColor} p-2 rounded-3xl flex items-center`}
+          className={` border-2 border-${borderColor} p-2 rounded-3xl flex items-center flex-shrink-0`}
         >
           <div className="text-gray-700">
             {/* button for whatsapp */}
@@ -106,6 +107,7 @@ export default function Tutorial({
           </div>
         </div>
       </div>
+      
     </div>
   );
 }
