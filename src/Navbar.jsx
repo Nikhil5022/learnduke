@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { RiMenuLine, RiCloseLine, RiArrowDropDownLine } from "react-icons/ri"; 
-import learnDuke from './assets/learnDuke.png'
-import { FaUserCircle } from "react-icons/fa"; 
+import { RiMenuLine, RiCloseLine, RiArrowDropDownLine } from "react-icons/ri";
+import learnDuke from "./assets/learnDuke.png";
+import { FaUserCircle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 export default function Navbar() {
+  const navigator = useNavigate();
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
@@ -16,7 +18,14 @@ export default function Navbar() {
           <img src={learnDuke} alt="" className="h-10 ml-2" />
         </div>
         <div className="hidden md:flex space-x-4">
-          <div className="text-base font-semibold m-1.5">Find tutors</div>
+          <div
+            className="text-base font-semibold m-1.5 cursor-pointer"
+            onClick={() => {
+              navigator("/teachingJobs");
+            }}
+          >
+            Teaching Jobs
+          </div>
           <div className="text-base font-semibold m-1.5">
             Corporate training
           </div>
