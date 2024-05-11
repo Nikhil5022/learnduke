@@ -40,7 +40,11 @@ export default function Navbar() {
               <div className="font-semibold">Log in</div>
             </div>
             <hr className="m-2 mb-5" />
-            <div className="text-base font-semibold mb-4">Find tutors</div>
+            <div className="text-base font-semibold mb-4"
+              onClick={() => {
+                navigator("/teachingJobs");
+              }}
+            >Find tutors</div>
             <div className="text-base font-semibold mb-4">
               Corporate training
             </div>
