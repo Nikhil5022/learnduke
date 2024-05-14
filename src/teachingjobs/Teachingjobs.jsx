@@ -6,16 +6,13 @@ import { RiPaypalFill } from "react-icons/ri";
 import { SiAmericanexpress } from "react-icons/si";
 import { FaCcDiscover } from "react-icons/fa";
 import { FaApplePay } from "react-icons/fa";
-import Achievements from "../assets/Achievements.png";
-import Achievements2 from "../assets/Achievements2.jpg";
-import rozerpay from "../assets/rozerpay2.png";
-import phonepay from "../assets/phonepay.jpeg";
-
 import TeachingNavbar from "./TeachingNavbar";
 import teachingjobs from "../assets/teachingjobs.jpg";
 import companies from "../assets/companies.jpg";
 import DosAndDonts from "./DosAndDonts";
 import { useNavigate } from "react-router-dom";
+import Achievements from "../assets/Achievements.jpg";
+import numbers2 from "../assets/numbers2.jpg"
 export default function Teachingjobs() {
   const navigator = useNavigate();
   return (
@@ -65,7 +62,56 @@ export default function Teachingjobs() {
           </div>
         </div>
       </div>
-
+      <div className="w-full flex justify-center mt-10">
+        <div className="w-full md:w-10/12 lg:w-9/12 flex justify-evenly space-y-6 px-4">
+          {/* <div className="flex flex-col mt-5">
+            <span
+              className="text-3xl  md:text-8xl font-bold"
+              style={{
+                background: "linear-gradient(90deg, orange, orange)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              5000+
+            </span>
+            <span className="tracking-normal text-2xl font-semibold text-center">
+              Active online and offline jobs
+            </span>
+          </div>
+          <div className="flex flex-col ml-5">
+            <span
+              className="text-3xl  md:text-8xl font-bold"
+              style={{
+                background: "linear-gradient(90deg, orange, orange)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              2000+
+            </span>
+            <span className="tracking-normal text-2xl font-semibold text-center mr-10">
+              Companies hiring
+            </span>
+          </div>
+          <div className="flex flex-col">
+            <span
+              className="text-3xl  md:text-8xl font-bold"
+              style={{
+                background: "linear-gradient(90deg, orange, orange)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              1000+
+            </span>
+            <span className="tracking-normal text-2xl font-semibold text-center">
+              New jobs every week
+            </span>
+          </div> */}
+          <img src={numbers2} alt="" />
+        </div>
+      </div>
       <div className="w-full flex justify-center mt-10">
         <div className="w-full md:w-10/12 lg:w-9/12 flex flex-col space-y-6 px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -145,11 +191,16 @@ export default function Teachingjobs() {
           <div className="flex flex-col justify-center items-center">
             <div className="font-semibold text-xl">Trusted By</div>
           </div>
-          <div className="mt-10 flex justify-center">
-            <img src={Achievements} alt="" className=" h-32" />
-            <img src={Achievements2} alt="" className="h-32" />
-            <img src={rozerpay} alt="" className="h-40" />
-            <img src={phonepay} alt="" className="h-36" />
+          <div className="mt-10 flex flex-col lg:flex-row justify-center overflow-x-hidden">
+            {/* <div className="flex">
+              <img src={Achievements} alt="" className="h-16 md:h-32" />
+              <img src={Achievements2} alt="" className="h-16 md:h-32" />
+            </div>
+            <div className="flex">
+              <img src={rozerpay} alt="" className="h-40" />
+              <img src={phonepay} alt="" className="h-36" />
+            </div> */}
+            <img src={Achievements} alt="" className="w-full" />
           </div>
           <div>
             <div className="text-2xl font-bold m-3">How it works: </div>
@@ -176,8 +227,8 @@ export default function Teachingjobs() {
               </li>
             </ol>
             <div className="text-xl font-bold m-3">
-              Wide range of online and offline jobs categories for freshers and experienced
-              candidates:
+              Wide range of online and offline jobs categories for freshers and
+              experienced candidates:
             </div>
             <div
               className="mt-5 m-3  leading-relaxed tracking-wider"
@@ -186,8 +237,8 @@ export default function Teachingjobs() {
               We offer job listings in various categories such as Accounting &
               Finance, Business & Management, Computer & IT, Content Creation,
               Customer Service, Data Entry, Data Science & Analytics, Design,
-              Education & Training, Engineering, Home tutions & NGO jobs HR & Recruiting, Sales &
-              Marketing, and many more.
+              Education & Training, Engineering, Home tutions & NGO jobs HR &
+              Recruiting, Sales & Marketing, and many more.
             </div>
           </div>
           <div className="flex flex-col md:flex-row px-3 md:px-10">

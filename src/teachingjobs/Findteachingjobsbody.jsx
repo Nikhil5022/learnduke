@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import teachingjobs from "../assets/teachingjobs.jpg";
 import numbers from "../assets/numbers.webp";
 import companies from "../assets/companies.jpg";
+import numbers2 from "../assets/numbers2.jpg"
 
 export default function ResponsiveComponent() {
   const [isFixed, setIsFixed] = useState(false);
@@ -62,7 +63,7 @@ export default function ResponsiveComponent() {
           >
             Buy it now
           </button>
-          <img src={numbers} alt="" className="w-full" />
+          <img src={numbers2} alt="" className="w-full mt-5 mb-5" />
           <div className="text-lg font-semibold m-3">
             <span style={{ backgroundColor: "#FDFDAD" }}>
               Here are the top reasons to join LearnDuke Online and Offline
