@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import learnDuke from "../assets/learnDuke.png";
 import { FaSearch, FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export default function TeachingNavbar() {
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -30,8 +32,10 @@ export default function TeachingNavbar() {
           <div
             className={`hidden md:flex md:space-x-6 text-sm`}
           >
-            <div className="font-thin hover:underline cursor-pointer">
-              Find Teaching Jobs
+            <div className="font-thin hover:underline cursor-pointer"
+              onClick={() => navigate("/findteachingjobs")}
+            >
+              Find Jobs
             </div>
             <div className="font-thin hover:underline cursor-pointer">
               Customer Reviews
@@ -59,7 +63,7 @@ export default function TeachingNavbar() {
         <div className="absolute inset-x-0 top-16 w-full min-h-min  bg-white  rounded-md p-4 md:hidden" style={{boxShadow:"0 0 10px 0 rgba(0, 0, 0, 0.1)"}}>
           <div className="flex flex-col space-y-3">
             <div className="font-thin hover:underline cursor-pointer">
-              Find Teaching Jobs
+              Find Jobs
             </div>
             <div className="font-thin hover:underline cursor-pointer">
               Customer Reviews

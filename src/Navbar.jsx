@@ -26,7 +26,9 @@ export default function Navbar() {
           >
             Teaching Jobs
           </div>
-          <div className="text-base font-semibold m-1.5">
+          <div className="text-base font-semibold m-1.5"
+            onClick={() => {}}
+          >
             Corporate training
           </div>
           <div className="text-base font-semibold m-1.5">Become a tutor</div>

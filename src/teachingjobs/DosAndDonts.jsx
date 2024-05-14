@@ -12,7 +12,7 @@ export default function DosAndDonts() {
       >
         <div className="w-1/3 text-center border-r border-black p-2 text-sm font-semibold"></div>
         <div className="w-1/3 text-center border-r border-black p-2 text-sm font-semibold text-orange-400 flex flex-col md:flex-row justify-center items-center">
-          <div>Private Batch</div>
+          <div>LearnDuke Platform</div>
           <span
             className="py-0.5 px-1 rounded-lg text-white ml-0 md:ml-3"
             style={{
@@ -26,34 +26,23 @@ export default function DosAndDonts() {
           </span>
         </div>
         <div className="w-1/3 text-center  p-2 text-sm font-semibold text-orange-400">
-          Solo Class
+          Other Platform
         </div>
       </div>
       <div className="flex justify-center">
         <div className="w-1/3  p-4 border-r border-black text-sm font-semibold">
-          Class Size
-        </div>
-        <div className="w-1/3 text-center p-4 border-r border-black text-sm font-normal">
-          Up to 6 students
-        </div>
-        <div className="w-1/3 text-center p-4 text-sm font-normal">
-          1 student
-        </div>
-      </div>
-      <div className="flex justify-center">
-        <div className="w-1/3  p-4  border-r border-black text-sm font-semibold">
-          Individual Attention
+          Mentorship
         </div>
         <div className="w-1/3 p-4 flex justify-center items-center border-r border-black">
-          <img src={Correct} alt="Correct" className="max-w-2rem max-h-2rem " />
+        <img src={Correct} alt="Correct" className="max-w-2rem max-h-2rem " />
         </div>
-        <div className="w-1/3 p-4 flex justify-center items-center ">
-          <img src={Wrong} alt="Wrong" className="max-w-2rem max-h-2rem" />
+        <div className="w-1/3 p-4 flex justify-center items-center">
+        <img src={Wrong} alt="Wrong" className="max-w-2rem max-h-2rem" />
         </div>
       </div>
       <div className="flex justify-center">
         <div className="w-1/3  p-4  border-r border-black text-sm font-semibold">
-          Fixed Class Schedule
+          Resume Building
         </div>
         <div className="w-1/3 p-4 flex justify-center items-center border-r border-black">
           <img src={Correct} alt="Correct" className="max-w-2rem max-h-2rem " />
@@ -64,7 +53,7 @@ export default function DosAndDonts() {
       </div>
       <div className="flex justify-center">
         <div className="w-1/3  p-4  border-r border-black text-sm font-semibold">
-          Individual Projects
+          100% Job Assurance
         </div>
         <div className="w-1/3 p-4 flex justify-center items-center border-r border-black">
           <img src={Correct} alt="Correct" className="max-w-2rem max-h-2rem " />
@@ -75,7 +64,7 @@ export default function DosAndDonts() {
       </div>
       <div className="flex justify-center">
         <div className="w-1/3  p-4  border-r border-black text-sm font-semibold">
-          Personalised 1 on 1 Learning Experience
+          Upskilling Program
         </div>
         <div className="w-1/3 p-4 flex justify-center items-center border-r border-black">
           <img src={Correct} alt="Correct" className="max-w-2rem max-h-2rem " />
@@ -86,7 +75,7 @@ export default function DosAndDonts() {
       </div>
       <div className="flex justify-center">
         <div className="w-1/3  p-4  border-r border-black text-sm font-semibold">
-          Learning in an interactive & social setting
+          Personalised mentorship support
         </div>
         <div className="w-1/3 p-4 flex justify-center items-center border-r border-black">
           <img src={Correct} alt="Correct" className="max-w-2rem max-h-2rem " />
@@ -97,7 +86,7 @@ export default function DosAndDonts() {
       </div>
       <div className="flex justify-center">
         <div className="w-1/3  p-4  border-r border-black text-sm font-semibold">
-          Class Recordings covering key concepts
+          Direct contact to HR's
         </div>
         <div className="w-1/3 p-4 flex justify-center items-center border-r border-black">
           <img src={Correct} alt="Correct" className="max-w-2rem max-h-2rem " />
@@ -108,7 +97,7 @@ export default function DosAndDonts() {
       </div>
       <div className="flex justify-center">
         <div className="w-1/3  p-4  border-r border-black text-sm font-semibold">
-          One cover up class per month
+          Refund Policy
         </div>
         <div className="w-1/3 p-4 flex justify-center items-center border-r border-black">
           <img src={Correct} alt="Correct" className="max-w-2rem max-h-2rem " />
@@ -117,50 +106,7 @@ export default function DosAndDonts() {
           <img src={Wrong} alt="Wrong" className="max-w-2rem max-h-2rem" />
         </div>
       </div>
-      <div className="flex justify-center">
-        <div className="w-1/3  p-4  border-r border-black text-sm font-semibold">
-          Group Projects
-        </div>
-        <div className="w-1/3 p-4 flex justify-center items-center border-r border-black">
-          <img src={Correct} alt="Correct" className="max-w-2rem max-h-2rem " />
-        </div>
-        <div className="w-1/3 p-4 flex justify-center items-center ">
-          <img src={Wrong} alt="Wrong" className="max-w-2rem max-h-2rem" />
-        </div>
-      </div>
-      <div className="flex justify-center">
-        <div className="w-1/3  p-4  border-r border-black text-sm font-semibold">
-          Tynker Subscription*
-        </div>
-        <div className="w-1/3 p-4 flex justify-center items-center border-r border-black">
-          <img src={Correct} alt="Correct" className="max-w-2rem max-h-2rem " />
-        </div>
-        <div className="w-1/3 p-4 flex justify-center items-center ">
-          <img src={Wrong} alt="Wrong" className="max-w-2rem max-h-2rem" />
-        </div>
-      </div>
-      <div className="flex justify-center">
-        <div className="w-1/3  p-4  border-r border-black text-sm font-semibold">
-          Tynker Subscription*
-        </div>
-        <div className="w-1/3 p-4 flex justify-center items-center border-r border-black">
-          <img src={Correct} alt="Correct" className="max-w-2rem max-h-2rem " />
-        </div>
-        <div className="w-1/3 p-4 flex justify-center items-center ">
-          <img src={Wrong} alt="Wrong" className="max-w-2rem max-h-2rem" />
-        </div>
-      </div>
-      <div className="flex justify-center">
-        <div className="w-1/3 p-4  border-r border-black text-sm font-semibold">
-          Holiday Allowance
-        </div>
-        <div className="w-1/3 p-4 flex justify-center items-center border-r border-black">
-          <img src={Correct} alt="Correct" className="max-w-2rem max-h-2rem " />
-        </div>
-        <div className="w-1/3 p-4 flex justify-center items-center ">
-          <img src={Wrong} alt="Wrong" className="max-w-2rem max-h-2rem" />
-        </div>
-      </div>
+      
     </div>
   );
 }

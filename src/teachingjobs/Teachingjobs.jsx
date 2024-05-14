@@ -1,9 +1,19 @@
 import React from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { RiVisaLine } from "react-icons/ri";
+import { RiMastercardFill } from "react-icons/ri";
+import { RiPaypalFill } from "react-icons/ri";
+import { SiAmericanexpress } from "react-icons/si";
+import { FaCcDiscover } from "react-icons/fa";
+import { FaApplePay } from "react-icons/fa";
+import Achievements from "../assets/Achievements.png";
+import Achievements2 from "../assets/Achievements2.jpg";
+import rozerpay from "../assets/rozerpay2.png";
+import phonepay from "../assets/phonepay.jpeg";
+
 import TeachingNavbar from "./TeachingNavbar";
 import teachingjobs from "../assets/teachingjobs.jpg";
 import companies from "../assets/companies.jpg";
-import image from "../assets/image.jpg";
 import DosAndDonts from "./DosAndDonts";
 import { useNavigate } from "react-router-dom";
 export default function Teachingjobs() {
@@ -38,7 +48,7 @@ export default function Teachingjobs() {
           />
           <div className="flex flex-col p-4 md:p-10">
             <div className="text-4xl font-bold m-3 leading-relaxed tracking-wider">
-              Find an authentic teaching job for you
+              Find an authentic online and offline jobs for you
             </div>
             <div
               className="text-lg leading-loose tracking-wider ml-3"
@@ -49,7 +59,8 @@ export default function Teachingjobs() {
               seeking teaching work! Browse{" "}
               <span className="font-semibold">thousands</span> of{" "}
               <span className="font-semibold">teaching jobs</span> across all
-              major industries and find your perfect teaching job today.
+              major industries and find your perfect online and offline jobs
+              with your <span className="font-semibold">Location</span>.
             </div>
           </div>
         </div>
@@ -74,52 +85,50 @@ export default function Teachingjobs() {
             </div>
             <div className="p-4 bg-gray-100">
               <div className="text-xl font-bold leading-relaxed tracking-wide mb-3">
-                We see every job before you do
+                Apply directly to the employer
               </div>
               <div
                 className="leading-relaxed tracking-wide font-thin"
                 style={{ color: "#404040" }}
               >
-                Our specialty is finding job opportunities from multiple sources
-                in real time, before they're visible to everyone else. This
-                gives you the advantage to apply for these jobs before anyone
-                else does.
+                Browse high quality remote job opportunities and submit your
+                application straight to the best companies. We don't permit
+                agencies to post vacancies, ensuring only genuine and top remote
+                jobs are listed.
               </div>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="p-4 bg-gray-100">
               <div className="text-xl font-bold leading-relaxed tracking-wide mb-3">
-                We see every job before you do
+                1000+ new jobs every week
               </div>
               <div
                 className="leading-relaxed tracking-wide font-thin"
                 style={{ color: "#404040" }}
               >
-                Our specialty is finding job opportunities from multiple sources
-                in real time, before they're visible to everyone else. This
-                gives you the advantage to apply for these jobs before anyone
-                else does.
+                We are constantly monitoring social media, news sites and top
+                company career pages to discover new job vacancies. Each week,
+                we post thousands of new opportunities for remote work.
               </div>
             </div>
             <div className="p-4 bg-gray-100">
               <div className="text-xl font-bold leading-relaxed tracking-wide mb-3">
-                We see every job before you do
+                Expert assistance available
               </div>
               <div
                 className="leading-relaxed tracking-wide font-thin"
                 style={{ color: "#404040" }}
               >
-                Our specialty is finding job opportunities from multiple sources
-                in real time, before they're visible to everyone else. This
-                gives you the advantage to apply for these jobs before anyone
-                else does.
+                Our dedicated and helpful customer support team is always at
+                your service. For any assistance, feel free to reach out to us
+                via Instagram, Facebook, or Email.
               </div>
             </div>
           </div>
           <div className="items-center" style={{ color: "#404040" }}>
             <div className="text-center text-xl md:text-3xl font-semibold mt-12">
-              Great employers actively offering remote jobs
+              Great employers actively offering jobs
             </div>
             <div className="mt-10">
               <img src={companies} alt="" className="w-full" />
@@ -127,14 +136,20 @@ export default function Teachingjobs() {
           </div>
           <div className="flex flex-col justify-center items-center">
             <div className="text-2xl md:text-4xl font-bold p-5 mb-5 text-center px-3 md:px-16">
-              The #1 Remote Job Site for Genuine Opportunities for Indians.
+              The #1 Job Site for Genuine Opportunities for Indians.
             </div>
             <button className="bg-blue-500 text-white p-2 px-4 hover:scale-105">
-              Find teaching jobs now
+              Find jobs now
             </button>
           </div>
-          <div className="mt-10">
-            <img src={image} alt="" className="w-full" />
+          <div className="flex flex-col justify-center items-center">
+            <div className="font-semibold text-xl">Trusted By</div>
+          </div>
+          <div className="mt-10 flex justify-center">
+            <img src={Achievements} alt="" className=" h-32" />
+            <img src={Achievements2} alt="" className="h-32" />
+            <img src={rozerpay} alt="" className="h-40" />
+            <img src={phonepay} alt="" className="h-36" />
           </div>
           <div>
             <div className="text-2xl font-bold m-3">How it works: </div>
@@ -161,7 +176,7 @@ export default function Teachingjobs() {
               </li>
             </ol>
             <div className="text-xl font-bold m-3">
-              Wide range of remote job categories for freshers and experienced
+              Wide range of online and offline jobs categories for freshers and experienced
               candidates:
             </div>
             <div
@@ -171,7 +186,7 @@ export default function Teachingjobs() {
               We offer job listings in various categories such as Accounting &
               Finance, Business & Management, Computer & IT, Content Creation,
               Customer Service, Data Entry, Data Science & Analytics, Design,
-              Education & Training, Engineering, HR & Recruiting, Sales &
+              Education & Training, Engineering, Home tutions & NGO jobs HR & Recruiting, Sales &
               Marketing, and many more.
             </div>
           </div>
@@ -191,7 +206,7 @@ export default function Teachingjobs() {
                 Find an authentic remote job for you
               </div>
               <div className="text-left m-2">
-                <span className="text-lg font-bold">Rs. 699.00</span>
+                <span className="text-lg font-bold">Rs. 999.00</span>
                 <span className="text-white text-sm bg-orange-600 rounded-lg px-2 py-1 ml-2">
                   sale
                 </span>
@@ -213,6 +228,9 @@ export default function Teachingjobs() {
               </div>
             </div>
           </div>
+          <div className="w-full">
+            <DosAndDonts />
+          </div>
           <div className="flex flex-col justify-center items-center">
             <div className="text-center text-3xl font-semibold">Join now</div>
             <div
@@ -220,15 +238,54 @@ export default function Teachingjobs() {
               style={{ color: "#040404" }}
             >
               Click on the button below to know more details and apply for
-              remote jobs.
+              online and offline jobs.
             </div>
             <button className="bg-blue-500 text-white w-fit p-2 px-4 hover:scale-105 mt-5">
-              Find teaching jobs now
+              Find jobs now
             </button>
           </div>
-          {/* table */}
-          <div className="w-full">
-            <DosAndDonts />
+          <hr />
+
+          <div className="w-full flex flex-col md:flex-row text-center md:text-left ">
+            <div className="w-full md:w-1/2 flex flex-col">
+              <div className="text-xl font-semibold my-5">Resources</div>
+              <div className="font-thin hover:underline my-3">
+                Find Your online and offline Job
+              </div>
+              <div className="font-thin hover:underline my-3">
+                Customer Reviews
+              </div>
+              <div className="font-thin hover:underline my-3">Our Story</div>
+            </div>
+            <div className="w-full md:w-1/2">
+              <div className="text-xl font-semibold my-5">Contact Us</div>
+              <div className="font-thin hover:underline my-3">Contact Us</div>
+              <div className="font-thin hover:underline my-3">FAQ</div>
+              <div className="font-thin hover:underline my-3">
+                Terms & Policy
+              </div>
+            </div>
+          </div>
+          <div className="flex justify-center space-x-10 text-xl ">
+            <FaFacebook />
+            <FaInstagram />
+          </div>
+          <hr />
+          <div className="mt-10">
+            <div className="flex justify-center space-x-5">
+              <RiVisaLine className="text-xl" />
+              <RiMastercardFill className="text-xl" />
+              <RiPaypalFill className="text-xl" />
+              <SiAmericanexpress className="text-xl" />
+              <FaCcDiscover className="text-xl" />
+              <FaApplePay className="text-xl" />
+            </div>
+            <div
+              className=" font-thin text-sm m-5"
+              style={{ color: "#404040" }}
+            >
+              © 2021 LearnDuke. All rights reserved.
+            </div>
           </div>
         </div>
       </div>
