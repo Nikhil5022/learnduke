@@ -62,7 +62,9 @@ export default function TeachingNavbar() {
       {menuOpen && (
         <div className="absolute inset-x-0 top-16 w-full min-h-min  bg-white  rounded-md p-4 md:hidden" style={{boxShadow:"0 0 10px 0 rgba(0, 0, 0, 0.1)"}}>
           <div className="flex flex-col space-y-3">
-            <div className="font-thin hover:underline cursor-pointer">
+            <div className="font-thin hover:underline cursor-pointer"
+                onClick={() => navigate("/findteachingjobs")}
+            >
               Find Jobs
             </div>
             <div className="font-thin hover:underline cursor-pointer">
