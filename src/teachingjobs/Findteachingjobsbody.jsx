@@ -29,9 +29,9 @@ export default function ResponsiveComponent() {
         <img
           src={teachingjobs}
           alt=""
-          className={`w-full  ${
+          className={`w-full p-2  ${
             isFixed ? "md:sticky md:top-5" : ""
-          }`}
+          } `}
         />
       </div>
       <div className="w-full md:w-1/2 flex flex-col items-center mt-5 md:mt-0 p-5 md:p-0">

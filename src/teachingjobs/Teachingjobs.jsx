@@ -38,7 +38,7 @@ export default function Teachingjobs() {
             alt=""
             className="w-full md:w-1/2 mb-5 md:mb-0"
           />
-          <div className="flex flex-col p-4 md:p-10">
+          <div className="flex flex-col  md:p-10">
             <div className="text-4xl font-bold m-3 leading-relaxed tracking-wider">
               Find an authentic online and offline jobs for you
             </div>
@@ -199,7 +199,7 @@ export default function Teachingjobs() {
           </div>
           <div>
             <div className="text-2xl font-bold m-3">How it works: </div>
-            <ol className="ml-4 md:ml-10">
+            <ol className="ml-2 md:ml-10">
               <li className="m-1 leading-relaxed tracking-wide">
                 <span className="font-semibold " style={{ color: "#404040" }}>
                   Step 1:{" "}
