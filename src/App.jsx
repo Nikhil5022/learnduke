@@ -11,6 +11,8 @@ import Teachingjobs from "./teachingjobs/Teachingjobs";
 import Cyberschool from "./cyberschool/Cyberschool";
 import Findteachingjobs from "./teachingjobs/Findteachingjobs";
 import Contactus from "./teachingjobs/Contactus";
+import Reviews from "./teachingjobs/Reviews";
+import TeachingNavbar from "./teachingjobs/TeachingNavbar";
 
 function NavbarWrapper() {
   const location = useLocation();
@@ -18,8 +20,9 @@ function NavbarWrapper() {
     location.pathname !== "/teachingJobs" &&
     location.pathname !== "/cyberschool" &&
     location.pathname !== "/findteachingjobs" &&
-    location.pathname !== "/contactus";
-  return showNavbar ? <Navbar /> : null;
+    location.pathname !== "/contactus" &&
+    location.pathname !== "/reviews";
+  return showNavbar ? <Navbar /> : <TeachingNavbar />;
 }
 
 export default function App() {
@@ -34,6 +37,7 @@ export default function App() {
           <Route path="/cyberschool" element={<Cyberschool />} />
           <Route path="/findteachingjobs" element={<Findteachingjobs />} />
           <Route path="/contactus" element={<Contactus />} />
+          <Route path="/reviews" element={<Reviews />} />
           {/* Add additional routes here */}
         </Routes>
       </>

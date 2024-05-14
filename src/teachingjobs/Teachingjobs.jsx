@@ -1,6 +1,4 @@
-import React from "react";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
-import TeachingNavbar from "./TeachingNavbar";
+import React, { useRef } from "react";
 import teachingjobs from "../assets/teachingjobs.jpg";
 import companies from "../assets/companies.jpg";
 import DosAndDonts from "./DosAndDonts";
@@ -8,35 +6,28 @@ import { useNavigate } from "react-router-dom";
 import Achievements from "../assets/Achievements.jpg";
 import numbers2 from "../assets/numbers2.jpg";
 import Footer from "./Footer";
+
 export default function Teachingjobs() {
   const navigator = useNavigate();
+  const scrollRef = useRef(null);
+
+  const handleAddToCart = () => {
+    // Scroll to the top of the page
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth" // Add smooth scrolling behavior
+    });
+    // You can also add your add to cart logic here
+  };
+  
   return (
-    <div>
-      <div className="bg-orange-400 w-full h-10 flex justify-center items-center">
-        <div className="w-full md:w-10/12 lg:w-9/12 flex items-center justify-between px-4">
-          <div className="hidden md:flex text-white space-x-5 text-lg">
-            <FaFacebook />
-            <FaInstagram />
-          </div>
-          <div className="text-white flex-grow flex justify-center">
-            <div className="text-sm font-semibold">
-              The #1 job site to find a teaching job for you
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="w-full flex justify-center">
-        <div className="w-full md:w-10/12 lg:w-9/12 px-4">
-          <TeachingNavbar />
-        </div>
-      </div>
-      <hr className="mt-3 mb-5" />
+    <div ref={scrollRef}>
       <div className="w-full flex justify-center">
         <div className="w-full md:w-10/12 lg:w-9/12 flex flex-col md:flex-row px-4">
           <img
             src={teachingjobs}
             alt=""
-            className="w-full md:w-1/2 mb-5 md:mb-0"
+            className="w-full mb-5 md:mb-0"
           />
           <div className="flex flex-col  md:p-10">
             <div className="text-4xl font-bold m-3 leading-relaxed tracking-wider">
@@ -48,9 +39,9 @@ export default function Teachingjobs() {
             >
               Welcome to LearnDuke, the{" "}
               <span className="font-semibold">best site</span> for Indians 🇮🇳
-              seeking teaching work! Browse{" "}
+              seeking Online and offline work! Browse{" "}
               <span className="font-semibold">thousands</span> of{" "}
-              <span className="font-semibold">teaching jobs</span> across all
+              <span className="font-semibold">online and offline jobs</span> across all
               major industries and find your perfect online and offline jobs
               with your <span className="font-semibold">Location</span>.
             </div>
@@ -186,7 +177,7 @@ export default function Teachingjobs() {
           <div className="flex flex-col justify-center items-center">
             <div className="font-semibold text-xl">Trusted By</div>
           </div>
-          <div className="mt-10 flex flex-col lg:flex-row justify-center overflow-x-hidden">
+          <div className="mt-10 flex flex-col  justify-center overflow-x-hidden">
             {/* <div className="flex">
               <img src={Achievements} alt="" className="h-16 md:h-32" />
               <img src={Achievements2} alt="" className="h-16 md:h-32" />
@@ -257,9 +248,14 @@ export default function Teachingjobs() {
                   sale
                 </span>
               </div>
-              <button className="w-full border border-blue-500 py-4 text-blue-500 hover:border-2 ">
+              <button
+                
+                className="w-full border border-blue-500 py-4 text-blue-500 hover:border-2"
+                onClick={handleAddToCart}
+              >
                 Add to cart
               </button>
+
               <button
                 className="w-full text-white bg-blue-500 py-4 mt-2 hover:scale-105"
                 onClick={() => {

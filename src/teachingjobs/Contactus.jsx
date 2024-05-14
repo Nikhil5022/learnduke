@@ -1,31 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 
 import TeachingNavbar from "./TeachingNavbar";
 import Footer from "./Footer";
+
 export default function Contactus() {
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to the top when the component mounts
+  }, []);
+
   return (
     <div>
-      <div className="bg-orange-400 w-full h-10 flex justify-center items-center">
-        <div className="w-full md:w-10/12 lg:w-9/12 flex items-center justify-between px-4">
-          <div className="hidden md:flex text-white space-x-5 text-lg">
-            <FaFacebook />
-            <FaInstagram />
-          </div>
-          <div className="text-white flex-grow flex justify-center">
-            <div className="text-sm font-semibold">
-              The #1 job site to find a teaching job for you
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="w-full flex justify-center">
-        <div className="w-full md:w-10/12 lg:w-9/12 px-4">
-          <TeachingNavbar />
-        </div>
-      </div>
-      <hr className="mt-3 mb-5" />
-      <div className=" mt-5 flex justify-center">
+      <div className="mt-5 flex justify-center">
         <div className="w-2/3 flex flex-col justify-center items-center">
           <div className="text-6xl font-semibold">Contact</div>
           <div style={{ color: "#404040" }} className="mt-10 text-center">

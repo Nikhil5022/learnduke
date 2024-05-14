@@ -19,8 +19,13 @@ export default function Footer() {
           <div className="font-thin hover:underline my-3">
             Find Your online and offline Job
           </div>
-          <div className="font-thin hover:underline my-3">Customer Reviews</div>
+          <div className="font-thin hover:underline my-3"
+            onClick={() => {
+              navigator("/reviews");
+            }}
+          >Customer Reviews</div>
           <div className="font-thin hover:underline my-3">Our Story</div>
+          <div className="font-thin hover:underline my-3"><a href="https://learnduke.com/live">Learnduke upskill program</a></div>
         </div>
         <div className="w-full md:w-1/2">
           <div className="text-xl font-semibold my-5">Contact Us</div>
@@ -37,8 +42,18 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex justify-center space-x-10 text-xl mb-5">
-        <FaFacebook />
-        <FaInstagram />
+        <FaFacebook
+          onClick={() => {
+            window.open("https://www.facebook.com/profile.php?id=61555285526363", "_blank");
+          }}
+          className="cursor-pointer"
+        />
+        <FaInstagram 
+          onClick={() => {
+            window.open("https://www.instagram.com/learnduke_india?igsh=bjVmODg3ejFwMzR6", "_blank");
+          }}
+          className="cursor-pointer"
+        />
       </div>
       <hr />
       <div className="mt-10">

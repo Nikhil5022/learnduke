@@ -138,12 +138,12 @@ export default function Reviews() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <>
-      <div className="flex flex-col justify-center items-center mt-10">
+    <div className="ml-10">
+      <div className="flex flex-col justify-center items-center mt-10 ">
         <div className="font-semibold text-2xl">Customer Reviews</div>
         <div className="flex flex-col mt-3">
           <div className="flex">
-            <Stars number={4} />
+            <Stars number={4.9} />
             <span className="font-thin">4.64 out of 5</span>
           </div>
           <div className="font-thin">Based on {totalReviews} ratings</div>
@@ -159,7 +159,7 @@ export default function Reviews() {
           </div>
         ))}
       </div>
-      <div className="flex justify-center mt-5">
+      <div className="flex justify-center m-5">
         {Array.from({ length: totalPages }, (_, i) => (
           <button
             key={i}
@@ -172,6 +172,6 @@ export default function Reviews() {
           </button>
         ))}
       </div>
-    </>
+    </div>
   );
 }
