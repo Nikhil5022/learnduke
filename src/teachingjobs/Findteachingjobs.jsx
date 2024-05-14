@@ -3,6 +3,7 @@ import TeachingNavbar from "./TeachingNavbar";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import Findteachingjobsbody from "./Findteachingjobsbody";
 import Reviews from "./Reviews";
+import Footer from "./Footer";
 export default function Findteachingjobs() {
   return (
     <div>
@@ -32,7 +33,12 @@ export default function Findteachingjobs() {
       </div>
       <div className="w-full flex justify-center p-5">
         <div className="w-full md:w-10/12 lg:w-9/12">
-          <Reviews  />
+          <Reviews />
+        </div>
+      </div>
+      <div className="w-full flex justify-center p-5">
+        <div className="w-full md:w-10/12 lg:w-9/12">
+          <Footer />
         </div>
       </div>
     </div>

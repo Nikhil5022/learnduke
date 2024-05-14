@@ -1,18 +1,13 @@
 import React from "react";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { RiVisaLine } from "react-icons/ri";
-import { RiMastercardFill } from "react-icons/ri";
-import { RiPaypalFill } from "react-icons/ri";
-import { SiAmericanexpress } from "react-icons/si";
-import { FaCcDiscover } from "react-icons/fa";
-import { FaApplePay } from "react-icons/fa";
 import TeachingNavbar from "./TeachingNavbar";
 import teachingjobs from "../assets/teachingjobs.jpg";
 import companies from "../assets/companies.jpg";
 import DosAndDonts from "./DosAndDonts";
 import { useNavigate } from "react-router-dom";
 import Achievements from "../assets/Achievements.jpg";
-import numbers2 from "../assets/numbers2.jpg"
+import numbers2 from "../assets/numbers2.jpg";
+import Footer from "./Footer";
 export default function Teachingjobs() {
   const navigator = useNavigate();
   return (
@@ -117,7 +112,7 @@ export default function Teachingjobs() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="p-4 bg-gray-100">
               <div className="text-xl font-bold leading-relaxed tracking-wide mb-3">
-                We see every job before you do
+                We see every job before you do 👁️
               </div>
               <div
                 className="leading-relaxed tracking-wide font-thin"
@@ -131,7 +126,7 @@ export default function Teachingjobs() {
             </div>
             <div className="p-4 bg-gray-100">
               <div className="text-xl font-bold leading-relaxed tracking-wide mb-3">
-                Apply directly to the employer
+                Apply directly to the employer 👩🏻‍💼
               </div>
               <div
                 className="leading-relaxed tracking-wide font-thin"
@@ -147,7 +142,7 @@ export default function Teachingjobs() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="p-4 bg-gray-100">
               <div className="text-xl font-bold leading-relaxed tracking-wide mb-3">
-                1000+ new jobs every week
+                1000+ new jobs every week ✅
               </div>
               <div
                 className="leading-relaxed tracking-wide font-thin"
@@ -160,7 +155,7 @@ export default function Teachingjobs() {
             </div>
             <div className="p-4 bg-gray-100">
               <div className="text-xl font-bold leading-relaxed tracking-wide mb-3">
-                Expert assistance available
+                Expert assistance available 😊
               </div>
               <div
                 className="leading-relaxed tracking-wide font-thin"
@@ -295,49 +290,7 @@ export default function Teachingjobs() {
               Find jobs now
             </button>
           </div>
-          <hr />
-
-          <div className="w-full flex flex-col md:flex-row text-center md:text-left ">
-            <div className="w-full md:w-1/2 flex flex-col">
-              <div className="text-xl font-semibold my-5">Resources</div>
-              <div className="font-thin hover:underline my-3">
-                Find Your online and offline Job
-              </div>
-              <div className="font-thin hover:underline my-3">
-                Customer Reviews
-              </div>
-              <div className="font-thin hover:underline my-3">Our Story</div>
-            </div>
-            <div className="w-full md:w-1/2">
-              <div className="text-xl font-semibold my-5">Contact Us</div>
-              <div className="font-thin hover:underline my-3">Contact Us</div>
-              <div className="font-thin hover:underline my-3">FAQ</div>
-              <div className="font-thin hover:underline my-3">
-                Terms & Policy
-              </div>
-            </div>
-          </div>
-          <div className="flex justify-center space-x-10 text-xl ">
-            <FaFacebook />
-            <FaInstagram />
-          </div>
-          <hr />
-          <div className="mt-10">
-            <div className="flex justify-center space-x-5">
-              <RiVisaLine className="text-xl" />
-              <RiMastercardFill className="text-xl" />
-              <RiPaypalFill className="text-xl" />
-              <SiAmericanexpress className="text-xl" />
-              <FaCcDiscover className="text-xl" />
-              <FaApplePay className="text-xl" />
-            </div>
-            <div
-              className=" font-thin text-sm m-5"
-              style={{ color: "#404040" }}
-            >
-              © 2021 LearnDuke. All rights reserved.
-            </div>
-          </div>
+          <Footer />
         </div>
       </div>
     </div>
