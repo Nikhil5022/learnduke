@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import Achievements from "../assets/Achievements.jpg";
 import numbers2 from "../assets/numbers2.jpg";
 import Footer from "./Footer";
+import axios from "axios"
+import image from "../assets/learnDuke.png";
 
 export default function Teachingjobs() {
   const navigator = useNavigate();
@@ -18,6 +20,41 @@ export default function Teachingjobs() {
       behavior: "smooth" // Add smooth scrolling behavior
     });
     // You can also add your add to cart logic here
+  };
+
+  const checkoutHandler = async () => {
+    
+    const { data } = await axios.post("http://localhost:3000/api/v1/checkout", {
+      amount: 999,
+      // userID: user._id,
+    });
+
+    const options = {
+      key: "rzp_test_jH3t9W8Up3P2iW",
+      amount: 999 / 100,
+      currency: "INR",
+      name: "Sample user",
+      description: "Tutorial of RazorPay",
+      image: image,
+      order_id: data.order.id,
+      handler: function(res) {
+        console.log("Payment suceesfull");
+        window.location.href = "/";
+      },
+      prefill: {
+        name: "Sample User" || user.name,
+        email: "Sample@gmail.com" || user.email,
+        contact: "9482047294",
+      },
+      notes: {
+        address: "Razorpay Corporate Office",
+      },
+      theme: {
+        color: "#121212",
+      },
+    };
+    const razor = new window.Razorpay(options);
+    razor.open();
   };
   
   return (
@@ -258,9 +295,10 @@ export default function Teachingjobs() {
 
               <button
                 className="w-full text-white bg-blue-500 py-4 mt-2 hover:scale-105"
-                onClick={() => {
-                  window.open("https://rzp.io/l/learndukeindia", "_blank");
-                }}
+                // onClick={() => {
+                //   window.open("https://rzp.io/l/learndukeindia", "_blank");
+                // }}
+                onClick={() => checkoutHandler()}
               >
                 Buy it now
               </button>
