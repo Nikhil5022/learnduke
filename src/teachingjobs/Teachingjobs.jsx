@@ -1,49 +1,35 @@
-import React from "react";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
-import { RiVisaLine } from "react-icons/ri";
-import { RiMastercardFill } from "react-icons/ri";
-import { RiPaypalFill } from "react-icons/ri";
-import { SiAmericanexpress } from "react-icons/si";
-import { FaCcDiscover } from "react-icons/fa";
-import { FaApplePay } from "react-icons/fa";
-import TeachingNavbar from "./TeachingNavbar";
+import React, { useRef } from "react";
 import teachingjobs from "../assets/teachingjobs.jpg";
 import companies from "../assets/companies.jpg";
 import DosAndDonts from "./DosAndDonts";
 import { useNavigate } from "react-router-dom";
 import Achievements from "../assets/Achievements.jpg";
-import numbers2 from "../assets/numbers2.jpg"
+import numbers2 from "../assets/numbers2.jpg";
+import Footer from "./Footer";
+
 export default function Teachingjobs() {
   const navigator = useNavigate();
+  const scrollRef = useRef(null);
+
+  const handleAddToCart = () => {
+    // Scroll to the top of the page
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth" // Add smooth scrolling behavior
+    });
+    // You can also add your add to cart logic here
+  };
+  
   return (
-    <div>
-      <div className="bg-orange-400 w-full h-10 flex justify-center items-center">
-        <div className="w-full md:w-10/12 lg:w-9/12 flex items-center justify-between px-4">
-          <div className="hidden md:flex text-white space-x-5 text-lg">
-            <FaFacebook />
-            <FaInstagram />
-          </div>
-          <div className="text-white flex-grow flex justify-center">
-            <div className="text-sm font-semibold">
-              The #1 job site to find a teaching job for you
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="w-full flex justify-center">
-        <div className="w-full md:w-10/12 lg:w-9/12 px-4">
-          <TeachingNavbar />
-        </div>
-      </div>
-      <hr className="mt-3 mb-5" />
+    <div ref={scrollRef}>
       <div className="w-full flex justify-center">
         <div className="w-full md:w-10/12 lg:w-9/12 flex flex-col md:flex-row px-4">
           <img
             src={teachingjobs}
             alt=""
-            className="w-full md:w-1/2 mb-5 md:mb-0"
+            className="w-full mb-5 md:mb-0"
           />
-          <div className="flex flex-col p-4 md:p-10">
+          <div className="flex flex-col  md:p-10">
             <div className="text-4xl font-bold m-3 leading-relaxed tracking-wider">
               Find an authentic online and offline jobs for you
             </div>
@@ -53,9 +39,9 @@ export default function Teachingjobs() {
             >
               Welcome to LearnDuke, the{" "}
               <span className="font-semibold">best site</span> for Indians 🇮🇳
-              seeking teaching work! Browse{" "}
+              seeking Online and offline work! Browse{" "}
               <span className="font-semibold">thousands</span> of{" "}
-              <span className="font-semibold">teaching jobs</span> across all
+              <span className="font-semibold">online and offline jobs</span> across all
               major industries and find your perfect online and offline jobs
               with your <span className="font-semibold">Location</span>.
             </div>
@@ -117,7 +103,7 @@ export default function Teachingjobs() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="p-4 bg-gray-100">
               <div className="text-xl font-bold leading-relaxed tracking-wide mb-3">
-                We see every job before you do
+                We see every job before you do 👁️
               </div>
               <div
                 className="leading-relaxed tracking-wide font-thin"
@@ -131,7 +117,7 @@ export default function Teachingjobs() {
             </div>
             <div className="p-4 bg-gray-100">
               <div className="text-xl font-bold leading-relaxed tracking-wide mb-3">
-                Apply directly to the employer
+                Apply directly to the employer 👩🏻‍💼
               </div>
               <div
                 className="leading-relaxed tracking-wide font-thin"
@@ -147,7 +133,7 @@ export default function Teachingjobs() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="p-4 bg-gray-100">
               <div className="text-xl font-bold leading-relaxed tracking-wide mb-3">
-                1000+ new jobs every week
+                1000+ new jobs every week ✅
               </div>
               <div
                 className="leading-relaxed tracking-wide font-thin"
@@ -160,7 +146,7 @@ export default function Teachingjobs() {
             </div>
             <div className="p-4 bg-gray-100">
               <div className="text-xl font-bold leading-relaxed tracking-wide mb-3">
-                Expert assistance available
+                Expert assistance available 😊
               </div>
               <div
                 className="leading-relaxed tracking-wide font-thin"
@@ -191,7 +177,7 @@ export default function Teachingjobs() {
           <div className="flex flex-col justify-center items-center">
             <div className="font-semibold text-xl">Trusted By</div>
           </div>
-          <div className="mt-10 flex flex-col lg:flex-row justify-center overflow-x-hidden">
+          <div className="mt-10 flex flex-col  justify-center overflow-x-hidden">
             {/* <div className="flex">
               <img src={Achievements} alt="" className="h-16 md:h-32" />
               <img src={Achievements2} alt="" className="h-16 md:h-32" />
@@ -204,7 +190,7 @@ export default function Teachingjobs() {
           </div>
           <div>
             <div className="text-2xl font-bold m-3">How it works: </div>
-            <ol className="ml-4 md:ml-10">
+            <ol className="ml-2 md:ml-10">
               <li className="m-1 leading-relaxed tracking-wide">
                 <span className="font-semibold " style={{ color: "#404040" }}>
                   Step 1:{" "}
@@ -262,9 +248,14 @@ export default function Teachingjobs() {
                   sale
                 </span>
               </div>
-              <button className="w-full border border-blue-500 py-4 text-blue-500 hover:border-2 ">
+              <button
+                
+                className="w-full border border-blue-500 py-4 text-blue-500 hover:border-2"
+                onClick={handleAddToCart}
+              >
                 Add to cart
               </button>
+
               <button
                 className="w-full text-white bg-blue-500 py-4 mt-2 hover:scale-105"
                 onClick={() => {
@@ -295,49 +286,7 @@ export default function Teachingjobs() {
               Find jobs now
             </button>
           </div>
-          <hr />
-
-          <div className="w-full flex flex-col md:flex-row text-center md:text-left ">
-            <div className="w-full md:w-1/2 flex flex-col">
-              <div className="text-xl font-semibold my-5">Resources</div>
-              <div className="font-thin hover:underline my-3">
-                Find Your online and offline Job
-              </div>
-              <div className="font-thin hover:underline my-3">
-                Customer Reviews
-              </div>
-              <div className="font-thin hover:underline my-3">Our Story</div>
-            </div>
-            <div className="w-full md:w-1/2">
-              <div className="text-xl font-semibold my-5">Contact Us</div>
-              <div className="font-thin hover:underline my-3">Contact Us</div>
-              <div className="font-thin hover:underline my-3">FAQ</div>
-              <div className="font-thin hover:underline my-3">
-                Terms & Policy
-              </div>
-            </div>
-          </div>
-          <div className="flex justify-center space-x-10 text-xl ">
-            <FaFacebook />
-            <FaInstagram />
-          </div>
-          <hr />
-          <div className="mt-10">
-            <div className="flex justify-center space-x-5">
-              <RiVisaLine className="text-xl" />
-              <RiMastercardFill className="text-xl" />
-              <RiPaypalFill className="text-xl" />
-              <SiAmericanexpress className="text-xl" />
-              <FaCcDiscover className="text-xl" />
-              <FaApplePay className="text-xl" />
-            </div>
-            <div
-              className=" font-thin text-sm m-5"
-              style={{ color: "#404040" }}
-            >
-              © 2021 LearnDuke. All rights reserved.
-            </div>
-          </div>
+          <Footer />
         </div>
       </div>
     </div>

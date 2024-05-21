@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import teachingjobs from "../assets/teachingjobs.jpg";
-import numbers from "../assets/numbers.webp";
 import companies from "../assets/companies.jpg";
 import numbers2 from "../assets/numbers2.jpg"
 
@@ -29,14 +28,14 @@ export default function ResponsiveComponent() {
         <img
           src={teachingjobs}
           alt=""
-          className={`w-full  ${
+          className={`w-full p-2  ${
             isFixed ? "md:sticky md:top-5" : ""
-          }`}
+          } `}
         />
       </div>
       <div className="w-full md:w-1/2 flex flex-col items-center mt-5 md:mt-0 p-5 md:p-0">
         <div className="w-full md:w-2/3">
-          <div className="text-xs font-thin tracking-widest ml-2 md:ml-0">
+          <div className="text-xs font-thin tracking-widest ml-2">
             1 YEAR FULL ACCESS MEMBERSHIP
           </div>
           <div className="text-3xl font-semibold tracking-wider text-left m-2">

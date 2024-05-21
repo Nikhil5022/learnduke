@@ -5,7 +5,7 @@ import "./teaching.css";
 
 export default function DosAndDonts() {
   return (
-    <div className="w-full border border-black m-3">
+    <div className="w-full border border-black ">
       <div
         className="flex justify-between  border-b border-black"
         style={{ backgroundColor: "#FFF4E8" }}
